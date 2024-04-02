@@ -59,7 +59,7 @@ class OOTDressModel:
 
     @staticmethod
     def generate_static(
-        pipe: OOTDiffusion,
+        pipe: OOTDress,
         cmm: ClothesMaskModel,
         cloth_path: Union[str, bytes, Path ,Image.Image],
         model_path: Union[str, bytes, Path ,Image.Image],
