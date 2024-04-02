@@ -3,7 +3,7 @@ from PIL import Image
 import torch.nn as nn
 import numpy as np
 
-from oot_diffusion.humanparsing.utils import find_midpoint_y, label_map, get_palette
+from oot_dress.humanparsing.utils import find_midpoint_y, label_map, get_palette
 
 
 class BodyParsingModel:
