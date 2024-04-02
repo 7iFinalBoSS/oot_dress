@@ -24,7 +24,7 @@ class OOTDressModel:
         self.cache_dir = cache_dir
 
     def load_pipe(self):
-        self.pipe = OOTDiffusion(
+        self.pipe = OOTDress(
             hg_root=self.hg_root,
             cache_dir=self.cache_dir,
         )
