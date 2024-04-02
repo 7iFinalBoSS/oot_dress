@@ -25,7 +25,7 @@ from .pipelines_ootd.unet_garm_2d_condition import UNetGarm2DConditionModel
 from .pipelines_ootd.unet_vton_2d_condition import UNetVton2DConditionModel
 
 
-class OOTDiffusion:
+class OOTDress:
     def __init__(self, hg_root: str, model_type: str = "dc", cache_dir: str = None):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.hg_root = hg_root

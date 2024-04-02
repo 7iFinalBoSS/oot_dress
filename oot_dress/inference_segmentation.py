@@ -4,9 +4,9 @@ from pathlib import Path
 import time
 import torch
 
-from oot_diffusion.humanparsing.inference import BodyParsingModel
-from oot_diffusion.ootd_utils import get_mask_location, resize_crop_center
-from oot_diffusion.openpose.inference import PoseModel
+from oot_dress.humanparsing.inference import BodyParsingModel
+from oot_dress.ootd_utils import get_mask_location, resize_crop_center
+from oot_dress.openpose.inference import PoseModel
 from typing import Union
 
 _category_get_mask_input = {
@@ -19,7 +19,7 @@ DEFAULT_HG_ROOT = Path(os.getcwd()) / "oodt_models"
 
 
 class ClothesMaskModel:
-    def __init__(self, hg_root: str = None, cache_dir: str = None, model_type: str = "hd"):
+    def __init__(self, hg_root: str = None, cache_dir: str = None):
         """
         Args:
             hg_root (str, optional): Path to the hg root directory. Defaults to CWD.
@@ -71,8 +71,8 @@ class ClothesMaskModel:
         human_parsing_model: BodyParsingModel,
         pose_model: PoseModel,
         hg_root: str = None,
-        model_type: str = "hd",
-        category: str = "lowerbody",
+        model_type: str = "dc",
+        category: str = "dress",
     ):
         if hg_root is None:
             hg_root = DEFAULT_HG_ROOT

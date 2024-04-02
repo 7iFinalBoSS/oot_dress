@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import argparse
 
-from oot_diffusion.inference_segmentation import ClothesMaskModel
+from oot_dress.inference_segmentation import ClothesMaskModel
 
 
 DEFAULT_HG_ROOT = Path(os.getcwd()) / "ootd_models"

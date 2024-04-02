@@ -4,7 +4,7 @@ from PIL import Image
 from pathlib import Path
 import time
 
-from oot_diffusion.inference_with_mask import OOTDiffusionWithMaskModel
+from oot_dress.inference_with_mask import OOTDiffusionWithMaskModel
 
 DEFAULT_HG_ROOT = Path(os.getcwd()) / "ootd_models"
 example_model_path = Path(__file__).parent / "oot_diffusion/assets/model_1.png"

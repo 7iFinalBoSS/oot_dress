@@ -4,7 +4,7 @@ from PIL import Image
 from pathlib import Path
 import time
 
-from oot_diffusion import OOTDiffusionModel
+from oot_dress import OOTDressModel
 
 DEFAULT_HG_ROOT = Path(os.getcwd()) / "ootd_models"
 example_model_path = Path(__file__).parent / "oot_diffusion/assets/model_1.png"
@@ -33,7 +33,7 @@ if __name__ == "__main__":
             f"Using default hg_root to store models path {DEFAULT_HG_ROOT}. Use --hg_root to specify a different path."
         )
 
-    model = OOTDiffusionModel(
+    model = OOTDressModel(
         hg_root=args.hg_root,
         cache_dir=args.cache_dir,
     )
