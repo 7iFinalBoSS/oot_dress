@@ -33,7 +33,7 @@ class OOTDiffusionWithMaskModel:
                 allow_patterns=["**/ootd/**"],
             )
 
-        self.pipe = OOTDiffusion(
+        self.pipe = OOTDress(
             hg_root=self.hg_root,
             cache_dir=self.cache_dir,
         )
@@ -68,7 +68,7 @@ class OOTDiffusionWithMaskModel:
 
     @staticmethod
     def generate_static(
-        pipe: OOTDiffusion,
+        pipe: OOTDress,
         cloth_path: Union[str, bytes, Path, Image.Image],
         model_path: Union[str, bytes, Path, Image.Image],
         model_mask_path: Union[str, bytes, Path, Image.Image],

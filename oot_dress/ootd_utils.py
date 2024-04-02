@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from PIL import Image, ImageDraw
 
-from oot_diffusion.humanparsing.utils import label_map, remove_outliers
+from oot_dress.humanparsing.utils import label_map, remove_outliers
 
 
 def extend_arm_mask(wrist, elbow, scale):

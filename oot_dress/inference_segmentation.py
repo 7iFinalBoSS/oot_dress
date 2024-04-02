@@ -29,7 +29,6 @@ class ClothesMaskModel:
             hg_root = DEFAULT_HG_ROOT
         self.hg_root = hg_root
         self.cache_dir = cache_dir
-        self.model_type = model_type
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
 
         start_model_parse_load = time.perf_counter()
@@ -62,7 +61,6 @@ class ClothesMaskModel:
             human_parsing_model=self.human_parsing_model,
             pose_model=self.pose_model,
             hg_root=self.hg_root,
-            model_type = self.model_type,
         )
 
     @staticmethod
@@ -71,9 +69,10 @@ class ClothesMaskModel:
         human_parsing_model: BodyParsingModel,
         pose_model: PoseModel,
         hg_root: str = None,
-        model_type: str = "dc",
-        category: str = "dress",
+        
     ):
+      
+        category = "dress"
         if hg_root is None:
             hg_root = DEFAULT_HG_ROOT
 
@@ -98,7 +97,7 @@ class ClothesMaskModel:
         end_open_pose = time.perf_counter()
         print(f"Open pose in {end_open_pose - start_open_pose:.2f} seconds.")
         mask, mask_gray = get_mask_location(
-           model_type,
+           "dc",
             _category_get_mask_input[category],
             model_parse,
             keypoints,
